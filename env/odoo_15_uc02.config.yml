@@ -1,0 +1,97 @@
+# odoo_15_uc02.config.yml (sample)
+CORE:
+  repos:
+    - id: odoo/odoo
+      url: https://github.com/odoo/odoo.git
+      branch: "15.0"
+      depth: 1
+      auth: https
+
+    - id: odoo/enterprise
+      url: git@github.com:odoo/enterprise.git
+      branch: "15.0"
+      depth: 1
+      auth: ssh
+      ssh_key_path: /opt/odoo/.ssh/id_ed25519_ee
+
+ADDONS:
+  OCA:
+    repos:
+      - id: OCA/account-financial-tools
+        url: https://github.com/OCA/account-financial-tools.git
+        branch: "15.0"
+        depth: 1
+        auth: https
+      - id: OCA/account-financial-reporting
+        url: https://github.com/OCA/account-financial-reporting.git
+        branch: "15.0"
+        depth: 1
+        auth: https
+      - id: OCA/account-invoicing
+        url: https://github.com/OCA/account-invoicing.git
+        branch: "15.0"
+        depth: 1
+        auth: https
+      - id: OCA/account-payment
+        url: https://github.com/OCA/account-payment.git
+        branch: "15.0"
+        depth: 1
+        auth: https
+      - id: OCA/bank-payment
+        url: https://github.com/OCA/bank-payment.git
+        branch: "15.0"
+        depth: 1
+        auth: https
+      - id: OCA/bank-statement-import
+        url: https://github.com/OCA/bank-statement-import.git
+        branch: "15.0"
+        depth: 1
+        auth: https
+      - id: OCA/l10n-belgium
+        url: https://github.com/OCA/l10n-belgium.git
+        branch: "15.0"
+        depth: 1
+        auth: https
+      - id: OCA/partner-contact
+        url: https://github.com/OCA/partner-contact.git
+        branch: "15.0"
+        depth: 1
+        auth: https
+      - id: OCA/web
+        url: https://github.com/OCA/web.git
+        branch: "15.0"
+        depth: 1
+        auth: https
+      - id: OCA/server-tools
+        url: https://github.com/OCA/server-tools.git
+        branch: "15.0"
+        depth: 1
+        auth: https
+
+  Noviat:
+    repos:
+      - id: Noviat/noviat-apps
+        url: https://github.com/Noviat/noviat-apps.git
+        branch: "15.0"
+        depth: 1
+        auth: https
+
+  Custom:
+    repos:
+      - id: BY-ODOO/odoo-custom
+        url: https://github.com/BY-ODOO/odoo-custom.git
+        branch: "15.0"
+        depth: 1
+        auth: https
+
+skip_list:
+  - odoo/enterprise
+
+EXAMPLES:
+  repos:
+    - id: vendor/repo
+      url: ssh://git@bitbucket.org/vendor/repo.git
+      branch: "15.0"
+      depth: 1
+      auth: ssh
+      ssh_key_path: /home/odoo/.ssh/id_ed25519_custom
